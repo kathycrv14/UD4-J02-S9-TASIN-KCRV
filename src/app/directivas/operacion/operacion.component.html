@@ -1,0 +1,38 @@
+<section class="sectionGeneral">
+    <section class="sectionValores">
+        <section class="sectionValorUno row">
+            <section class="col-6">
+                <p>Ingrese el primer valor:</p>
+            </section>
+            <section class="col-6">
+                <input type="number" [(ngModel)] = "valor1" (input)="Sumar()"/>
+            </section>            
+        </section>
+        <section class="sectionValorDos row">
+            <section class="col-6">
+                <p>Ingrese el segundo valor:</p>
+            </section>
+            <section class="col-6">
+                <input type="number" [(ngModel)] = "valor2" (input)="Sumar()"/>
+            </section>            
+        </section>
+        <section>
+            <select name="" id="" [(ngModel)] = "operaciones">
+                <option value="opciones">Elija una opcion</option>
+                <option value="sumar">Sumar</option>
+                <option value="restar">Restar</option>
+                <option value="multiplicar">Multiplicar</option>
+                <option value="dividir">Dividir</option>
+            </select>
+        </section>
+        <section class="sectionResultado">
+            <section name="" id="" [ngSwitch]="operaciones">
+                <p *ngSwitchCase="'sumar'" [ngStyle]="{'color': ColorUno()}">{{ valor1 + valor2 }}</p>
+                <p *ngSwitchCase="'restar'" [ngStyle]="{'color': ColorDos()}">{{ valor1 - valor2 }}</p>
+                <p *ngSwitchCase="'multiplicar'" [ngStyle]="{'color': ColorTres()}">{{ valor1 * valor2 }}</p>
+                <p *ngSwitchCase="'dividir'" [ngStyle]="{'color': ColorCuatro()}">{{ valor1 / valor2 }}</p>
+                <p *ngSwitchDefault="" [ngStyle]="{'color': ColorCinco()}">No selecciono ninguna operacion</p>
+            </section>
+        </section>
+    </section>
+</section>

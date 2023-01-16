@@ -1,0 +1,26 @@
+.sectionGeneral{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.sectionValores{
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-color: rgb(0, 0, 0);
+    width: 50%;
+    padding: 1rem;
+}
+
+.sectionValorUno, .sectionValorDos{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex: wrap;
+}
+
+.sectionResultado{
+    padding-top: 1rem;
+}
